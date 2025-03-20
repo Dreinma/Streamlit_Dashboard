@@ -14,7 +14,8 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    main_data = pd.read_csv("main_data.csv", parse_dates=["dteday"])
+    main_data = pd.read_csv("../Dashboard/main_data.csv")
+    main_data["dteday"] = main_data["dteday"].astype(str)
     return main_data
 
 main_data = load_data()

@@ -1,8 +1,7 @@
 matplotlib==3.10.1
-missingno==0.5.2
 numpy==2.2.3
 pandas==2.2.3
 plotly==6.0.1
-scipy==1.15.2
 seaborn==0.13.2
+statsmodels==0.14.4
 streamlit==1.43.2

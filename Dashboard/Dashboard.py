@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-import statsmodels.api as sm
 
 # Konfigurasi Halaman
 st.set_page_config(
@@ -323,7 +322,6 @@ with tab2:
         fig = px.scatter(filtered_data, x='temp_actual', y='cnt',
                         color='season_name', size='cnt',
                         labels={'temp_actual': 'Temperature (°C)', 'cnt': 'Hourly Rentals', 'season_name': 'Season'},
-                        trendline='ols',
                         title='Temperature vs. Rentals')
         fig.update_layout(xaxis_title='Temperature (°C)', yaxis_title='Hourly Rentals')
         st.plotly_chart(fig, use_container_width=True)
@@ -346,7 +344,6 @@ with tab2:
         fig = px.scatter(filtered_data, x='hum_actual', y='cnt',
                         color='season_name',
                         labels={'hum_actual': 'Humidity (%)', 'cnt': 'Hourly Rentals'},
-                        trendline='ols',
                         title='Humidity vs. Rentals')
         fig.update_layout(xaxis_title='Humidity (%)', yaxis_title='Hourly Rentals')
         st.plotly_chart(fig, use_container_width=True)
@@ -355,7 +352,6 @@ with tab2:
         fig = px.scatter(filtered_data, x='windspeed_actual', y='cnt',
                         color='season_name',
                         labels={'windspeed_actual': 'Wind Speed (km/h)', 'cnt': 'Hourly Rentals'},
-                        trendline='ols',
                         title='Wind Speed vs. Rentals')
         fig.update_layout(xaxis_title='Wind Speed (km/h)', yaxis_title='Hourly Rentals')
         st.plotly_chart(fig, use_container_width=True)
@@ -370,7 +366,6 @@ with tab3:
         fig = px.scatter(filtered_data, x='comfort_index', y='cnt',
                         color='season_name',
                         labels={'comfort_index': 'Comfort Index', 'cnt': 'Hourly Rentals', 'season_name': 'Season'},
-                        trendline='ols',
                         title='Comfort Index vs. Rentals')
         fig.update_layout(xaxis_title='Comfort Index (0-1)', yaxis_title='Hourly Rentals')
         st.plotly_chart(fig, use_container_width=True)
